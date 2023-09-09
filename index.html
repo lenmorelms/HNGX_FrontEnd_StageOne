@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HNGX FrontEnd Stage One</title>
+</head>
+<body>
+    <div class="display-name">
+        <h1 data-testid="slackUserName">Learnmore Mombe</h1>
+    </div>
+    <div class="display-img">
+        <img data-testid="slackDisplayImage" src="image/me.jpg" alt="Learnmore Mombe">
+    </div>
+    <div class="current-day-of-week">
+        <p data-testid="currentDayOfTheWeek" id="currentDayOfTheWeek"></p>
+    </div>
+    <div class="current-utc-time">
+        <p data-testid="currentUTCTime" id="currentUTCTime"></p>
+    </div>
+    <div class="my-track">
+        <p data-testid="myTrack">Frontend</p>
+    </div>
+    <div class="github-url">
+        <a data-testid="githubURL" href="https://github.com/lenmorelms">My GitHub</a>
+    </div>
+    <script>
+        // CURRENT DAY OF THE WEEK
+        var d = new Date();
+        var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var dayOfWeek = weekdays[d.getDay()];
+        document.querySelector("#currentDayOfTheWeek").innerHTML = dayOfWeek;
+        // UTC TIME
+        setInterval(
+            ()=> { 
+                var date = new Date();
+                document.querySelector("#currentUTCTime").innerHTML = date.getTime();
+             }
+        , 1000 );
+
+    </script>
+</body>
+</html>

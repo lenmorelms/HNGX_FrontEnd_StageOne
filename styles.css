@@ -1,0 +1,20 @@
+* {
+    margin: auto;
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div {
+    padding: 1em;
+    text-align: center;
+}
+.display-img img {
+    border-radius: 50%;
+    height: 300px;
+}
+div p {
+    font-weight: bolder;
+    font-size: large;
+}
+div a:hover {
+    text-decoration: none;
+}
